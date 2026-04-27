@@ -1,0 +1,27 @@
+{
+  "name": "astroflow",
+  "version": "1.0.0",
+  "description": "Modern portfolio website powered by Astro. Fully automated CI/CD pipeline using GitHub Actions for build validation, linting, and seamless deployment.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stingy-namake/astroflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stingy-namake/astroflow/issues"
+  },
+  "homepage": "https://github.com/stingy-namake/astroflow#readme",
+  "dependencies": {
+    "@astrojs/node": "^10.0.6",
+    "astro": "^6.1.9"
+  }
+}
