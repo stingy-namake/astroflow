@@ -1,13 +1,7 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  output: 'server',
-  adapter: node({
-    mode: 'standalone',
-  }),
-  server: {
-    port: 3000,
-    host: true,
-  },
+  output: 'static',
+  adapter: cloudflare(),
 });

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/stingy-namake/astroflow#readme",
   "dependencies": {
+    "@astrojs/cloudflare": "^13.2.2",
     "@astrojs/node": "^10.0.6",
     "astro": "^6.1.9"
   }
