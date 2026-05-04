@@ -24,6 +24,25 @@ jobs:
 
       - run: npm run build
 
+      - name: Check links
+        run: |
+          FAILED=0
+          for url in \
+            "https://github.com/stingy-namake" \
+            "https://github.com/stingy-namake/wallppy" \
+            "https://github.com/stingy-namake/ecotraveler" \
+            "https://github.com/stingy-namake/abonews"
+          do
+            status=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            if [ "$status" -ge 400 ]; then
+              echo "FAIL: $url returned $status"
+              FAILED=1
+            else
+              echo "OK: $url → $status"
+            fi
+          done
+          exit $FAILED
+
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
