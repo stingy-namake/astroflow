@@ -18,7 +18,7 @@ const skills = ['React', 'Node.js', 'MySQL', 'Docker', 'Python', 'C', 'Linux', '
   </head>
   <body>
     <main>
-      <header>
+      <header class="name">
         <h1>Pedro Henrique</h1>
         <p class="tagline">Full-stack developer</p>
       </header>
@@ -61,7 +61,7 @@ const skills = ['React', 'Node.js', 'MySQL', 'Docker', 'Python', 'C', 'Linux', '
 
 <style>
   main {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 4rem 2rem;
   }
@@ -83,6 +83,9 @@ const skills = ['React', 'Node.js', 'MySQL', 'Docker', 'Python', 'C', 'Linux', '
     color: #666;
     margin-bottom: 1.5rem;
   }
+  .name {
+    text-align: center;
+  }
   .tagline {
     color: #888;
     margin-top: 0.5rem;
@@ -97,6 +100,7 @@ const skills = ['React', 'Node.js', 'MySQL', 'Docker', 'Python', 'C', 'Linux', '
   }
   .skill-list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.25rem;
   }
