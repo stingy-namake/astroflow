@@ -1,12 +1,13 @@
 :root {
   --bg: #0a0a0a;
-  --bg-card: #0d0d0d;
-  --border: #1a1a1a;
-  --border-hover: #2a2a2a;
-  --text: #e0e0e0;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --text: #e8e8e8;
   --text-muted: #888;
   --text-dim: #555;
-  --accent: #0ff;
+  --glow: rgba(255, 255, 255, 0.08);
 }
 
 *, *::before, *::after {
@@ -14,7 +15,7 @@
 }
 
 html {
-  font-family: 'SF Mono', 'Fira Code', 'Monaco', monospace;
+  font-family: -apple-system, 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
   background: var(--bg);
   color: var(--text);
   font-size: 16px;
@@ -25,6 +26,9 @@ body {
   margin: 0;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255,255,255,0.04), transparent);
 }
 
 a {
@@ -33,6 +37,6 @@ a {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--bg);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
